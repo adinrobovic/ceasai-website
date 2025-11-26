@@ -14,31 +14,9 @@ export default function Home() {
         <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_center,rgba(0,122,255,0.25)_0%,transparent_70%)] blur-3xl"> </div>
 
         {/* Floating Glow Orbs */}
-        <motion.div
-          className="absolute top-20 left-1/4 w-48 h-48 bg-blue-500/20 rounded-full blur-3xl"
-            animate={{
-              y: [0, -30, 0],
-              x: [0, 15, 0],
-            }}
-            transition={{
-              duration: 6,
-              repeat: Infinity,
-              ease: "easeInOut",
-            }}
-        ></motion.div>
+        <div className="absolute top-20 left-1/4 w-48 h-48 bg-blue-500/20 rounded-full blur-3xl animate-float-slow"></div>
 
-        <motion.div
-          className="absolute bottom-20 right-1/4 w-56 h-56 bg-yellow-400/20 rounded-full blur-3xl"
-          animate={{
-            y: [0, 40, 0],
-            x: [0, -20, 0],
-          }}
-          transition={{
-            duration: 8,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
-        ></motion.div>
+        <div className="absolute bottom-20 right-1/4 w-56 h-56 bg-yellow-400/20 rounded-full blur-3xl animate-float-medium"></div>
 
         {/* Hero Content */}
         <motion.div

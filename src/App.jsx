@@ -1,12 +1,14 @@
-import React from "react";
+import React, { Suspense, lazy } from "react";
 import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 import Navbar from "./components/Navbar";
-import Home from "./pages/Home";
-import Services from "./pages/Services";
-import Industries from "./pages/Industries";
-import About from "./pages/About";
-import Contact from "./pages/Contact";
+
+const Home = lazy(() => import("./pages/Home"));
+const Services = lazy(() => import("./pages/Services"));
+const Industries = lazy(() => import("./pages/Industries"));
+const About = lazy(() => import("./pages/About"));
+const Contact = lazy(() => import("./pages/Contact"));
+
 
 function AnimatedRoutes() {
   const location = useLocation();
@@ -29,7 +31,9 @@ export default function App() {
     <Router>
       <div className="bg-black min-h-screen overflow-hidden text-white">
         <Navbar />
-        <AnimatedRoutes />
+        <Suspense fallback={<div className="text-center p-10 text-gray-400">Loading...</div>}>
+          <AnimatedRoutes />
+        </Suspense>
       </div>
     </Router>
   );

@@ -1,3 +1,23 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@keyframes float-slow {
+  0% { transform: translate(0, 0); }
+  50% { transform: translate(12px, -20px); }
+  100% { transform: translate(0, 0); }
+}
+
+@keyframes float-medium {
+  0% { transform: translate(0, 0); }
+  50% { transform: translate(-15px, 25px); }
+  100% { transform: translate(0, 0); }
+}
+
+.animate-float-slow {
+  animation: float-slow 6s ease-in-out infinite;
+}
+
+.animate-float-medium {
+  animation: float-medium 8s ease-in-out infinite;
+}
