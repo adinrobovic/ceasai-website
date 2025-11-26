@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import PageTransition from "../PageTransition";
 import { FaRobot, FaDatabase, FaEnvelope, FaCogs, FaChartLine, FaUsers } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 export default function Services() {
   const services = [
@@ -96,12 +97,12 @@ export default function Services() {
             Let’s build something powerful together.
           </p>
 
-          <a
-            href="/contact"
+          <Link
+            to="/contact"
             className="bg-gradient-to-r from-blue-500 to-blue-700 hover:from-blue-600 hover:to-blue-800 px-10 py-3 rounded-full font-semibold shadow-lg hover:shadow-blue-700/50 transition text-white"
           >
             Get in Touch
-          </a>
+          </Link>
         </motion.div>
       </div>
     </PageTransition>
