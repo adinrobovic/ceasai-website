@@ -11,7 +11,6 @@ export default function Navbar() {
 
   useEffect(() => {
     const handleScroll = () => {
-      // If user has scrolled down at least 20px, activate blur
       setScrolled(window.scrollY > 20);
     };
     window.addEventListener("scroll", handleScroll);
@@ -36,8 +35,7 @@ export default function Navbar() {
           <img
             src={logo}
             alt="CeasAI Logo"
-            className="h-14 w-auto object-contain"
-            style={{ cursor: "pointer" }}
+            className="h-14 w-auto object-contain cursor-pointer"
           />
         </Link>
 
@@ -71,10 +69,11 @@ export default function Navbar() {
         </div>
       </motion.nav>
 
-      {/* Mobile Menu (unchanged) */}
+      {/* Mobile Menu */}
       <AnimatePresence>
         {menuOpen && (
           <>
+            {/* Background overlay */}
             <motion.div
               className="fixed inset-0 bg-black bg-opacity-70 z-40"
               initial={{ opacity: 0 }}
@@ -82,6 +81,8 @@ export default function Navbar() {
               exit={{ opacity: 0 }}
               onClick={toggleMenu}
             />
+
+            {/* Slide-out panel */}
             <motion.div
               key="mobile-menu"
               initial={{ x: "100%" }}
@@ -90,24 +91,35 @@ export default function Navbar() {
               transition={{ type: "tween", duration: 0.3 }}
               className="fixed top-0 right-0 h-full w-2/3 bg-[#111] shadow-lg flex flex-col items-center pt-12 space-y-8 text-xl text-gray-200 z-50"
             >
+              {/* Close (X) icon */}
               <div
                 className="absolute top-6 right-6 text-3xl text-gray-400 hover:text-blue-400 cursor-pointer"
                 onClick={toggleMenu}
               >
                 ✖
               </div>
-              {["Home", "Services", "Industries", "About", "Contact"].map(
-                (item) => (
-                  <motion.div
-                    key={item}
-                    whileHover={{ scale: 1.1, color: "#3b82f6" }}
-                    onClick={toggleMenu}
+
+              {/* Mobile nav items WITH LINKS */}
+              {[
+                { name: "Home", path: "/" },
+                { name: "Services", path: "/services" },
+                { name: "Industries", path: "/industries" },
+                { name: "About", path: "/about" },
+                { name: "Contact", path: "/contact" },
+              ].map((item) => (
+                <motion.div
+                  key={item.name}
+                  whileHover={{ scale: 1.1, color: "#3b82f6" }}
+                >
+                  <Link
+                    to={item.path}
                     className="cursor-pointer"
+                    onClick={() => setMenuOpen(false)}  // close & navigate
                   >
-                    {item}
-                  </motion.div>
-                )
-              )}
+                    {item.name}
+                  </Link>
+                </motion.div>
+              ))}
             </motion.div>
           </>
         )}
