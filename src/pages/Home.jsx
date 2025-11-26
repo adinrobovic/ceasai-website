@@ -38,7 +38,7 @@ export default function Home() {
 
         {/* Hero Content */}
         <motion.div
-          className="text-center max-w-3xl"
+          className="relative z-20 text-center max-w-3xl"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, ease: "easeOut" }}
@@ -52,7 +52,7 @@ export default function Home() {
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.6 }}
-            className="bg-white/5 backdrop-blur-sm border border-white/10 px-6 py-4 rounded-xl text-center max-w-xl mx-auto mb-8 shadow-lg"
+            className="bg-white/5 backdrop-blur-sm border border-white/10 px-6 py-4 rounded-xl text-center max-w-xl mx-auto mb-8 shadow-lg relative z-20"
           >
             <p className="text-sm text-blue-300 font-semibold tracking-wide">
               Trusted by D1 Training — Metro Atlanta
@@ -67,13 +67,13 @@ export default function Home() {
             </p>
           </motion.div>
 
-          <p className="text-gray-300 text-lg leading-relaxed mb-10">
-            At CeasAI, we take the time to understand your business, identify areas for improvement, 
+          <p className="text-gray-300 text-lg leading-relaxed mb-10 relative z-20">
+            At CeasAI, we take the time to understand your business, identify areas for improvement,
             and develop tailored solutions to your goals. By combining your vision with our AI expertise, 
             we help your business operate smarter and grow faster.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-5 justify-center">
+          <div className="flex flex-col sm:flex-row gap-5 justify-center relative z-20">
             <Link
               to="/about"
               className="bg-gradient-to-r from-blue-500 to-blue-700 hover:from-blue-600 hover:to-blue-800 text-white px-8 py-3 rounded-full font-semibold shadow-lg hover:shadow-blue-700/50 transition"
