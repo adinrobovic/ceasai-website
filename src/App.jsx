@@ -29,7 +29,7 @@ function AnimatedRoutes() {
 export default function App() {
   return (
     <Router>
-      <div className="bg-black min-h-screen overflow-hidden text-white">
+      <div className="bg-black min-h-[100svh] text-white">
         <Navbar />
         <Suspense fallback={<div className="text-center p-10 text-gray-400">Loading...</div>}>
           <AnimatedRoutes />

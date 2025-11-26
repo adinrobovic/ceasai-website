@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <PageTransition>
       {/* Hero Section */}
-      <div className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden bg-gradient-to-b from-black via-[#0A0F1C] to-black text-white px-6">
+      <div className="relative min-h-[100svh] flex flex-col items-center justify-center bg-gradient-to-b from-black via-[#0A0F1C] to-black text-white px-6">
 
         {/* Background Glow */}
         <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_center,rgba(0,122,255,0.25)_0%,transparent_70%)] blur-3xl"> </div>

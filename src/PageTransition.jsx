@@ -7,7 +7,7 @@ export default function PageTransition({ children }) {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.20 }}
-      className="min-h-screen will-change-auto"
+      className="min-h-[100svh] w-full"
     >
       {children}
     </motion.div>
