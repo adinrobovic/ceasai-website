@@ -11,18 +11,29 @@ export default function Home() {
       <div className="relative min-h-[100svh] flex flex-col items-center justify-center bg-gradient-to-b from-black via-[#0A0F1C] to-black text-white px-6">
 
         {/* Background Glow */}
-        <div className="absolute inset-0 z-0 pointer-events-none 
-        bg-[radial-gradient(circle_at_center,rgba(0,122,255,0.25)_0%,transparent_70%)] blur-3xl">
+        <div className="absolute inset-0 pointer-events-none z-0 
+        bg-gradient-to-b from-[#0A1025] via-[#0A1535] to-black">
+        </div>
+
+        <div className="absolute inset-0 pointer-events-none z-0 
+        bg-[radial-gradient(circle_at_center,rgba(30,100,255,0.28)_0%,rgba(10,20,40,0)_70%)]
+        opacity-80 transform-gpu blur-2xl">
+        </div>
+
+        {/*Glassy Top Gradient */}
+        <div className="absolute inset-x-0 top-0 h-[60vh] pointer-events-none z-0
+        bg-[linear-gradient(to_bottom,rgba(255,255,255,0.05),rgba(0,0,0,0))]">
         </div>
 
         {/* Floating Glow Orbs */}
-        <div className="absolute inset-0 z-0 pointer-events-none 
-        bg-[radial-gradient(circle_at_center,rgba(0,122,255,0.25)_0%,transparent_70%)] blur-3xl">
+        <div className="absolute top-24 left-1/4 w-40 h-40 
+        rounded-full bg-blue-400/25 filter blur-2xl opacity-70
+        transform-gpu pointer-events-none animate-float-slow z-0">
         </div>
 
-        <div className="absolute bottom-20 right-1/4 w-56 h-56 
-        bg-yellow-400/20 rounded-full blur-3xl animate-float-medium 
-        pointer-events-none z-0">
+        <div className="absolute bottom-20 right-1/4 w-48 h-48 
+        rounded-full bg-yellow-300/20 filter blur-2xl opacity-60
+        transform-gpu pointer-events-none animate-float-medium z-0">
         </div>
 
         {/* Hero Content */}
