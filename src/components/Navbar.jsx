@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
-import logo from "../assets/CeasAI.png";
+import logo from "../assets/NewCeasAI.png";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);

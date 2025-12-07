@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import PageTransition from "../PageTransition";
-import Nolan from "../assets/NolanPeirce.png"
+import Paris from "../assets/Paris.jpg"
 import Matt from "../assets/MattJones.jpg"
 
 export default function About() {
@@ -42,8 +42,8 @@ export default function About() {
           <h2 className="text-3xl font-bold text-blue-400 mb-6">Our Story</h2>
 
           <p className="text-gray-300 leading-relaxed mb-4">
-            CeasAI was founded by <span className="text-blue-300 font-semibold">Nolan Pierce </span> 
-            and <span className="text-blue-300 font-semibold">Matt Jones</span> in October of 2024 —
+            CeasAI was founded by <span className="text-blue-300 font-semibold">Paris </span> 
+            and <span className="text-blue-300 font-semibold">Matt </span> in October of 2024 —
             two lifelong friends whose partnership began on the basketball court.
           </p>
 
@@ -54,7 +54,7 @@ export default function About() {
 
           <p className="text-gray-300 leading-relaxed mb-4">
             After graduating, both pursued careers in technology. Matt earned his degree in 
-            Cybersecurity from Montreat College, while Jaylen graduated with a degree in 
+            Cybersecurity from Montreat College, while Paris graduated with a degree in 
             Management of Information Systems from the University of West Georgia.
           </p>
 
@@ -89,11 +89,11 @@ export default function About() {
               whileHover={{ scale: 1.05 }}
             >
               <img
-                src={Nolan}
-                alt="Nolan placeholder"
-                className="w-40 h-40 rounded-full object-cover object-[center_20%] mb-6 border border-gray-700"
+                src={Paris}
+                alt="Paris placeholder"
+                className="w-40 h-40 rounded-full object-cover object-[center_10%] mb-6 border border-gray-700"
               />
-              <h3 className="text-xl font-semibold text-blue-300">Nolan Pierce</h3>
+              <h3 className="text-xl font-semibold text-blue-300">Paris</h3>
               <p className="text-gray-400 mt-2 text-center text-sm">
                 Co-founder • MIS Graduate • AI Innovator
               </p>
@@ -109,7 +109,7 @@ export default function About() {
                 alt="Matt placeholder"
                 className="w-40 h-40 rounded-full object-cover object-[center_30%] mb-6 border border-gray-700"
               />
-              <h3 className="text-xl font-semibold text-blue-300">Matt Jones</h3>
+              <h3 className="text-xl font-semibold text-blue-300">Matt </h3>
               <p className="text-gray-400 mt-2 text-center text-sm">
                 Co-founder • Cybersecurity Graduate • AI Strategist
               </p>
