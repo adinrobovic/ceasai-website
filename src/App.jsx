@@ -2,6 +2,7 @@ import React, { Suspense, lazy } from "react";
 import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 import Navbar from "./components/Navbar";
+import VoiceflowWidget from "./components/VoiceflowWidget";
 
 const MemoNavbar = React.memo(Navbar);
 
@@ -32,6 +33,7 @@ function AnimatedRoutes() {
 export default function App() {
   return (
     <Router>
+      <VoiceflowWidget />
       <div className="bg-black min-h-screen text-white overflow-x-hidden">
         <MemoNavbar />
         <Suspense fallback={<div className="text-center p-10 text-gray-400">Loading...</div>}>
